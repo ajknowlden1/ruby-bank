@@ -15,19 +15,19 @@ class Account
 
     def deposit(amount)
         @balance += amount.to_i
-        puts "Successfully deposited " + amount.to_s
-        puts "New balance is " + @balance.to_s
+        puts "Successfully deposited #{amount} "
+        puts "New balance is #{@balance}"
         return @balance
     end
 
     def withdraw(amount)
         if @balance - amount.to_i >= 0
             @balance -= amount.to_i
-            puts "Successfully withdrew " + amount.to_s
-            puts "New balance is " + @balance.to_s
+            puts "Successfully withdrew #{amount}"
+            puts "New balance is #{@balance}"
             return true
         else
-            puts "Insufficient funds"
+            puts 'Insufficient funds'
             return false
         end
     end
